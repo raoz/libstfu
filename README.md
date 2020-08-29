@@ -6,12 +6,12 @@ This is a small LD\_PRELOAD library that will direct stdout and stderr to /dev/n
 
 Example usage (assuming libstfu.so is in LD\_LIBRARY\_PATH, otherwise must give a path to libstfu.so):
 ```
-STFU_EXE=someloudprogram LD_PRELOAD=libstfu.so someprogramthatcallssomeloudprogram
+STFU_EXE=someloudprogram LD_PRELOAD=libstfu.so someprogramthatexecutessomeloudprogram
 ```
 
 Multiple targets can be specified by separating with colons:
 ```
-STFU_EXE=someloudprogram:anotherloudprogram LD_PRELOAD=libstfu.so someprogramthatcallsthem
+STFU_EXE=someloudprogram:anotherloudprogram LD_PRELOAD=libstfu.so someprogramthatexecutesthem
 ```
 
 ## Contributing
