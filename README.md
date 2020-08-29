@@ -19,3 +19,6 @@ Pull requests are welcome.
 
 ## License
 Libstfu is licensed under the 3-Clause BSD License.
+
+## Credits
+Thanks to [@mikroskeem](https://github.com/mikroskeem) for implementation in pseudocode.
