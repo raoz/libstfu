@@ -56,7 +56,7 @@ void suppress() {
 	int devNull = open("/dev/null", O_RDWR);
 	
 	// Redirect stdin, stdout and stderr to /dev/null
-	for (int i = 0; i < 3; ++i) {
+	for (int i = 1; i < 3; ++i) {
 		dup2(devNull, i);
 	}
 }
