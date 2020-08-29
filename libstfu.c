@@ -54,6 +54,10 @@ char * getSelfExecutableName() {
 void suppress() {
 	// Open /dev/null
 	int devNull = open("/dev/null", O_RDWR);
+	if(devNull < 0) {
+		perror("Failed to open /dev/null");
+		return;
+	}
 	
 	// Redirect stdin, stdout and stderr to /dev/null
 	for (int i = 1; i < 3; ++i) {
@@ -81,6 +85,7 @@ __attribute__((constructor)) static void initialize() {
 		while(token = strtok(NULL, ":")) {
 			if(strcmp(executableName, token) == 0) {
 				suppress();
+				break;
 			}
 		}
 	}
