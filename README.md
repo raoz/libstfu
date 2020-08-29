@@ -1,6 +1,6 @@
 # libstfu
 
-This is a small LD\_PRELOAD library that will direct stdin, stdout and stderr to /dev/null for specified executables by name.
+This is a small LD\_PRELOAD library that will direct stdout and stderr to /dev/null for specified executables by name.
 
 ## Usage
 
